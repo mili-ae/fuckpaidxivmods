@@ -1,0 +1,24 @@
+@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  display: grid;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-weight: normal;
+  grid-template-columns: 100%;
+  grid-template-rows: 10vh auto;
+  color: var(--vt-c-white-soft);
+  background-image: url("../images/backgroundplaceholder.jpg"), 
+  -webkit-linear-gradient(
+    top,
+    var(--vt-c-black-mute-half-transparent) 0%,
+    var(--vt-c-black-mute-half-transparent) 100%
+  );
+  background-blend-mode: color;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

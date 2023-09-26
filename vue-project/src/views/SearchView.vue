@@ -1,0 +1,3 @@
+<template>
+    SearchView Test
+</template>

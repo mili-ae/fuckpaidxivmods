@@ -13,7 +13,8 @@ import { BiSearch,
     BiDiscord,
     LaPatreon,
     FaRegularEye,
-    BiHeartFill } from "oh-vue-icons/icons";
+    BiHeartFill,
+    BiQuestionSquare } from "oh-vue-icons/icons";
 
 addIcons(BiSearch,
     LaDiceSolid,
@@ -21,7 +22,8 @@ addIcons(BiSearch,
     BiDiscord,
     LaPatreon,
     FaRegularEye,
-    BiHeartFill);
+    BiHeartFill,
+    BiQuestionSquare);
 
 const app = createApp(App);
 

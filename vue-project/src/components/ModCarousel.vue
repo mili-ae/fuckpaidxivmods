@@ -1,5 +1,6 @@
 <script setup>
     import { Carousel, Slide, Navigation } from 'vue3-carousel';
+    import ModCard from './ModCard.vue';
 
     defineProps({
     title: {
@@ -10,33 +11,44 @@
 </script>
 
 <template>
-    <div class="md:h-auto">
-        <h3 class="bg-slate-500 mb-1 p-2 text-center rounded-lg text-xl cursor-default">{{title}}</h3>
-        <Carousel :items-to-show="3" :breakpoints="breakpoints" class="space-x-4">
-            <Slide v-for="slide in 10" :key="slide" class="h-auto">
-                <div class="align-baseline m-3 bg-black bg-opacity-50">
-                    <p class="cursor-default">TestName</p>
-                    <img src="../images/itemimageplaceholder.png" alt="">
-                </div>
+    <div class="max-w-full">
+        <h3 class="bg-slate-700 mb-1 p-2 text-center rounded-lg text-xl cursor-default">{{title}}</h3>
+        <Carousel :items-to-show="3" :items-to-scroll="3" :mouse-drag="false" :wrap-around="true">
+            <Slide v-for="slide in dataJson" :key="slide.id" class="max-w-fit">
+                <ModCard :preview-img="slide.previewImg" :mod-name="slide.modName" :seen="slide.seen" :likes="slide.likes"></ModCard>
             </Slide>
-            <template #addons>
-                <Navigation />
+            <template #addons="{ slidesCount }">
+                <Navigation v-if="slidesCount > 3"/>
             </template>
         </Carousel>
     </div>
 </template>
 
 <script>
-const breakpoints = {
-  // 700px and up
-  700: {
-    itemsToShow: 2,
-    snapAlign: 'start',
-  },
-  // 1024 and up
-  1024: {
-    itemsToShow: 3,
-    snapAlign: 'start',
-  },
-}
+    import json from '../test/testJson.json';
+    import { defineComponent } from 'vue';
+
+    export default {
+        data() {
+            return {
+                dataJson: json
+            }
+        }
+    }
 </script>
+
+<style>
+.carousel__prev,
+.carousel__next {
+    border-color: rgb(0, 0, 0);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    transition: ease-in 150ms;
+}
+
+.carousel__prev:hover,
+.carousel__next:hover {
+    border-color: rgb(119, 119, 119);
+}
+</style>

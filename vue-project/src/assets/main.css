@@ -6,13 +6,13 @@
 #app {
   display: grid;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
   font-weight: normal;
   grid-template-columns: 100%;
   grid-template-rows: 10vh auto;
   color: var(--vt-c-white-soft);
-  background-image: url("../images/backgroundplaceholder.jpg"), 
+  background-color: var(--vt-c-black-soft);
+  /* background-image: url("../images/backgroundplaceholder.jpg"), 
   -webkit-linear-gradient(
     top,
     var(--vt-c-black-mute-half-transparent) 0%,
@@ -20,5 +20,9 @@
   );
   background-blend-mode: color;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+}
+
+html {
+  scrollbar-width: none;
 }

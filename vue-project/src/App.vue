@@ -4,7 +4,7 @@ import ButtonLink from './components/ButtonLink.vue';
 </script>
 
 <template>
-  <header class="bg-slate-500 flex max-w-7x1 items-center justify-between p-6 lg:px-8 h-14">
+  <header class="bg-slate-700 flex max-w-7x1 items-center justify-between p-6 lg:px-8 h-14">
     <nav class="flex justify-between p-6 lg:px-8 items-center space-x-10">
       <div class="flex lg:flex-1 items-center">
         <RouterLink to="/">
@@ -26,4 +26,8 @@ import ButtonLink from './components/ButtonLink.vue';
     </nav>
   </header>
   <RouterView />
+  <footer class="mt-4 bg-slate-700 text-center">
+    Final Fantasy XIV ©2010-2023 SQUARE ENIX CO., LTD. All Rights Reserved. <br />
+    This site is not affiliated in any way with SQUARE ENIX CO., LTD.
+  </footer>
 </template>

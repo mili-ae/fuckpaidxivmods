@@ -26,7 +26,6 @@
 
 <script>
     import json from '../test/testJson.json';
-    import { defineComponent } from 'vue';
 
     export default {
         data() {

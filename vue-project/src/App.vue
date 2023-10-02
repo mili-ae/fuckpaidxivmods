@@ -12,7 +12,7 @@ import ButtonLink from './components/ButtonLink.vue';
         </RouterLink>
       </div>
       <div class="flex lg:flex-1 space-x-5">
-        <ButtonLink button-name="Browse" to="/all" icon="io-newspaper"/>
+        <ButtonLink button-name="Browse" to="/browse" icon="io-newspaper"/>
         <ButtonLink button-name="Search" to="/search" icon="bi-search"/>
       </div>
     </nav>

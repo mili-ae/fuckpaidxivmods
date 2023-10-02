@@ -13,8 +13,8 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/all',
-      name: 'all',
+      path: '/browse',
+      name: 'browse',
       component: () => import('../views/BrowseView.vue')
     },
     {

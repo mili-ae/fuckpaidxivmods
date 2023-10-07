@@ -18,13 +18,18 @@
             type: String,
             required: false,
             default: "1"
+        },
+        style: {
+            type: String,
+            required: false,
+            default: "hover:bg-gray-300 hover:text-black rounded-md p-1 flex items-center space-x-1"
         }
     })
 </script>
 
 <template>
-    <RouterLink v-bind:to="to" class="hover:bg-gray-300 hover:text-black rounded-md p-1 flex items-center space-x-1">
-        <v-icon v-bind:name="icon" v-bind:scale="iconScale" />
+    <RouterLink :to="to" :class="style">
+        <v-icon :name="icon" :scale="iconScale" />
         <p>{{ buttonName }}</p>
     </RouterLink>
 </template>
